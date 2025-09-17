@@ -9,17 +9,17 @@
 
 
 #question1 
-number = int(input("enter your age :"))
-print(f"your age is {number}")
+# number = int(input("enter your age :"))
+# print(f"your age is {number}")
 
 
 #compound assignment operator
-a = 10
-a += 5
-print(a)
+# a = 10
+# a += 5
+# print(a)
 
 # print(ord("R"))
 # print(ord("T"))
 
-print ("R" > "T")  
+# print ("R" > "T")  
 # cannot compare string with an integer 
