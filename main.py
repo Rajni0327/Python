@@ -86,13 +86,173 @@
 
 
 #loops 
+
 #1
 # num = int(input("enter number of times you want to execute  :"))
 # for i in range(num):
 #     print("hello world")
 
 #2
-num = int(input("enter a number :"))
 
-for i in range (1, num+1):
-    print (i)
+# num = int(input("enter a number :"))
+
+# for i in range (1, num+1):
+#     print (i)
+
+#3
+# num = int(input("enter a number :"))
+
+# for i in range (num, 0, -1):
+#     print (i)
+
+#4
+# num = int(input("enter a number :"))
+
+# for i in range (1, 11):
+#     print (f"{num} x {i} = {num*i}")
+
+#5
+# num = int(input("enter a number :"))
+# sum = 0
+# for i in range (1, num+1):
+#     sum = sum + i
+
+# print (f"the sum is {sum}")
+
+#6
+# num = int(input("enter a number :"))
+# fac = 1
+# for i in range (1, num+1):
+#     fac = fac * i
+
+# print (f"the factorial is {fac}")
+
+#7
+# num = int(input("enter a number :"))
+# even =0
+# odd = 0
+# for i in range (1, num+1):
+#     if i % 2 ==0:
+#         even = even + i
+#     else:
+#         odd = odd + i
+
+# print (f"even and odd sum is {even} and {odd}")
+
+#8
+# num = int(input("enter a number :"))
+# for i in range (1, num+1):
+#     if num % i == 0:
+#         print (i)
+
+#9
+# num = int(input("enter a number to find out if its perfect or not  :"))
+# sum = 0
+# for i in range (1, num):
+#     if num % i == 0:
+#         sum = sum + i
+# if sum == num:
+#     print(f"{num} is a perfect number")
+# else:
+#     print(f"{num} is not a perfect number")
+
+#10
+# num = int(input("enter a number to find out if its prime or not  :"))
+# count = 0
+# for i in range (1, num+1):
+#     if num % i ==0:
+#         count = count + 1
+
+# if count == 2:
+#     print(f"number is a prime number {num}")
+# else:
+#     print(f"{num} is not a prime number")
+
+#11
+# string = input("enter a string you want to reverse :")
+# inLine = ""
+# for i in range(len(string)-1, -1, -1):
+#     inLine = inLine + string[i]
+# print(inLine)
+
+#12
+# string = input("enter a string you want to reverse :")
+# inLine = ""
+# for i in range(len(string)-1, -1, -1):
+#     inLine = inLine + string[i]
+
+# if string == inLine:
+#     print(f"{string} is a palindrome")
+# else:
+#     print(f"{string} is not a palindrome")
+
+#13
+# word = input("enter something :")
+# char = 0
+# dig = 0
+# spchar= 0
+
+# for i in word :
+#     if i.isalpha():
+#         char = char + 1
+#     elif i.isdigit():
+#         dig = dig + 1
+#     else:
+#         spchar = spchar + 1
+
+# print(f"characters {char} \ndigits {dig} \n special characters {spchar}")
+
+
+
+#while loop 
+
+
+#1
+#to extract digits of a number
+# a = int(input("enter a number :"))
+# while a > 0:
+#     print(a%10)
+#     a = a//10
+
+#2
+#extract number to print in reverse order 
+# a = int(input("enter a number :"))
+# rev = 0
+# while a > 0:
+#     rev = rev * 10 + (a % 10)
+#     a = a//10
+# print(rev)
+
+#3
+# a = int(input("enter a number :"))
+# copy = a
+# rev = 0
+# while a > 0:
+#     rev = rev * 10 + (a % 10)
+#     a = a//10
+
+# if copy == rev:
+#     print(f"{copy} is a palindromic number")
+# else:
+#     print(f"{copy} is not a palindromic number ")
+
+#game 
+#craete a number guessing game
+import random
+number = random.randint(1, 10)
+print(number)
+tries = 0
+
+while True :
+    guess = int(input("guess a number between 1 to 10 :"))
+    if guess < number:
+        print("too low ")
+        tries += 1
+    elif guess > number:
+        print("too high ")
+        tries += 1
+    else:
+        print(f"congratulations you guessed it right in {tries} tries")
+        tries += 1
+        break
+
