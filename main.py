@@ -35,6 +35,8 @@
 # else:
 #     print(f"{num2} is greater than {num1}")
 
+
+
 #2
 # user = input("enter your gender (male/female):")
 
@@ -42,6 +44,8 @@
 #     print ("good Morning sir ")
 # else:
 #     print("good Morning ma'am")
+
+
 
 #3
 # num = int(input("enter a number :"))
@@ -51,6 +55,7 @@
 # else:
 #     print(f"{num} is odd number")
 
+
 #4
 # name = input("enter your name :")
 # age = int(input("enter your age :"))
@@ -59,6 +64,7 @@
 #     print(f"Hello {name} you are a valid voter")
 # else:
 #     print(f"Hello {name} you are not a valid voter")
+
 
 #5 
 # year = int(input("enter a year :"))
@@ -92,12 +98,14 @@
 # for i in range(num):
 #     print("hello world")
 
-#2
 
+#2
 # num = int(input("enter a number :"))
 
 # for i in range (1, num+1):
 #     print (i)
+
+
 
 #3
 # num = int(input("enter a number :"))
@@ -105,11 +113,15 @@
 # for i in range (num, 0, -1):
 #     print (i)
 
+
+
 #4
 # num = int(input("enter a number :"))
 
 # for i in range (1, 11):
 #     print (f"{num} x {i} = {num*i}")
+
+
 
 #5
 # num = int(input("enter a number :"))
@@ -119,6 +131,8 @@
 
 # print (f"the sum is {sum}")
 
+
+
 #6
 # num = int(input("enter a number :"))
 # fac = 1
@@ -126,6 +140,8 @@
 #     fac = fac * i
 
 # print (f"the factorial is {fac}")
+
+
 
 #7
 # num = int(input("enter a number :"))
@@ -139,11 +155,15 @@
 
 # print (f"even and odd sum is {even} and {odd}")
 
+
+
 #8
 # num = int(input("enter a number :"))
 # for i in range (1, num+1):
 #     if num % i == 0:
 #         print (i)
+
+
 
 #9
 # num = int(input("enter a number to find out if its perfect or not  :"))
@@ -155,6 +175,8 @@
 #     print(f"{num} is a perfect number")
 # else:
 #     print(f"{num} is not a perfect number")
+
+
 
 #10
 # num = int(input("enter a number to find out if its prime or not  :"))
@@ -168,12 +190,15 @@
 # else:
 #     print(f"{num} is not a prime number")
 
+
+
 #11
 # string = input("enter a string you want to reverse :")
 # inLine = ""
 # for i in range(len(string)-1, -1, -1):
 #     inLine = inLine + string[i]
 # print(inLine)
+
 
 #12
 # string = input("enter a string you want to reverse :")
@@ -185,6 +210,8 @@
 #     print(f"{string} is a palindrome")
 # else:
 #     print(f"{string} is not a palindrome")
+
+
 
 #13
 # word = input("enter something :")
@@ -214,6 +241,7 @@
 #     print(a%10)
 #     a = a//10
 
+
 #2
 #extract number to print in reverse order 
 # a = int(input("enter a number :"))
@@ -222,6 +250,7 @@
 #     rev = rev * 10 + (a % 10)
 #     a = a//10
 # print(rev)
+
 
 #3
 # a = int(input("enter a number :"))
@@ -236,23 +265,31 @@
 # else:
 #     print(f"{copy} is not a palindromic number ")
 
+
+
 #game 
 #craete a number guessing game
-import random
-number = random.randint(1, 10)
-print(number)
-tries = 0
+# import random
+# number = random.randint(1, 10)
+# print(number)
+# tries = 0
 
-while True :
-    guess = int(input("guess a number between 1 to 10 :"))
-    if guess < number:
-        print("too low ")
-        tries += 1
-    elif guess > number:
-        print("too high ")
-        tries += 1
-    else:
-        print(f"congratulations you guessed it right in {tries} tries")
-        tries += 1
-        break
+
+# while True :
+#     guess = int(input("guess a number between 1 to 10 :"))
+#     if guess < number:
+#         print("too low ")
+#         tries += 1
+#     elif guess > number:
+#         print("too high ")
+#         tries += 1
+#     else:
+#         print(f"congratulations you guessed it right in {tries} tries")
+#         tries += 1
+#         break
+
+
+
+
+
 
