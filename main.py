@@ -288,6 +288,544 @@
 #         tries += 1
 #         break
 
+#functions 
+ 
+# def pallindrome (string):
+#     rev = ""
+#     for i in range(len(string)-1, -1, -1):
+#         rev = rev + string[i]   
+
+#     if string == rev:
+#         print(f"{string} is a palindrome")
+#     else:
+#         print(f"{string} is not a palindrome")
+
+# pallindrome("barcelona")
+
+
+#Data Structures
+
+# list
+# list traversing methods 
+
+# 1 ,using index  (prefersable )
+# a = [1, 2, 3, 4, 5]
+# for i in range(len(a)):
+#     print(a[i])
+
+# 2 ,using directly on value 
+# for i in a:
+#     print(i)    
+
+# methods in list 
+
+# a = [1, 2, 3, 4, 5]
+# a.append(6)
+# print(a)    
+# a.insert(0, 0)
+# print(a)    
+# a.extend( [7, 8, 9]) 
+# print(a)    
+# a.remove(3)
+# print(a)    
+# popped_item = a.pop(6)  #removes last element
+# print(popped_item)
+# print(a)
+# print(a.index(4))
+  
+# print(a.count(2))
+
+# a.sort()
+# print(a)
+    
+# a.reverse()
+# print(a)
+
+# new_a = a.copy()
+# print(a) 
+# print(new_a)  
+
+# a.clear()
+# print(a)    
+
+ 
+#1
+# list = [12,86,-90,65,45,-32,78,-12]
+
+# print ("positive numbers are :")
+# for i in list:
+#     if i >= 0:
+#         print(i)
+
+# print("negative numbers are :")
+# for i in list:
+#     if i < 0:
+#         print(i)
+
+#2
+
+# list = int(input("enter number of elements you want in list :"))
+# a = []
+# for i in range(list):
+#     num = int(input("enter a number :"))
+#     a.append(num)
+# print(a)
+
+# mean = sum(a)/len(a)
+# print(f"mean is {mean}")
+
+
+#3
+# a = [12,86,-90,65,45,657,-32,78,-12]
+# #ro find the largest element in the list
+# largest = a[0]
+# index = 0
+# for i in range(len(a)):
+#     if a[i] > largest:
+#         largest = a[i]
+#         index = i
+# print(f"largest number is {largest} and its index is {index}")
+
+#4
+#to find the second largest element in the list
+# a = [11,56,43,23]
+# largest = a[0]
+# index1= 0
+# second_largest = a[0]
+# index2 = 0
+# for i in a:
+#     if i > largest:
+#         second_largest = largest
+#         largest = i
+        
+#     elif i > second_largest:
+#         second_largest = i
+#         index2 = a.index(i)
+
+# print(f"second largest number is {second_largest} and its index is {index2}")
+
+
+#5
+#to find the sortest list 
+# a = [1,3,9,5,6]
+
+# for i in range(len(a)-1):
+#     if a[i] < a[i+1]:
+#         continue
+#     else:
+#         print("list is not sorted")
+#         break   
+# else:
+#     print("list is sorted")
+
+#tuple 
+
+#unpacking of tuple
+# a,b,c = (1, 2, 3)
+
+#set 
+# a = {1, 2, 3, 4, 5} 
+
+#set methods 
+
+# set = {1,2,3,4,5}
+
+# set.add(6)
+# print(set)
+# set.remove(3)
+# print(set)
+# set.discard(4)
+# print(set)
+# set.pop()  #removes random element
+# print(set)
+# set.clear()
+# print(set)
+
+
+# other methods
+# a = {1,2,3,4,5}
+# b = {4,5,6,7,8}
+
+# union
+# set = a.union(b)  #print(a | b)  to add both the sets 
+
+# intersection
+# intersaction = a.intersection(b)  #print(a & b) to find out common elements in both sets
+
+# difference
+# difference = a.difference(b)  #print(a - b) to find elements in a but not in b
+# difference = b.difference(a)  #print(b - a) to find elements in b but not in a
+
+# symmetric difference
+# symmetric_difference = a.symmetric_difference(b)  #print(a ^ b) to find elements in a and b but not in both 
+
+
+# dictionary
+# key value pair 
+ 
+# key cannot be changed
+# value can be changed
+
+# d= {10:100 , 20:200, 30:300, 40:400}
+
+# d.update ({50:500})   # you cannot update keys in dictionary
+# print(d)
+
+# d[60] = 600
+# print(d)     
+
+# del d[30]
+
+# d = {10:100 , 20:200, 30:300, 40:400}
+
+# for i in d:
+#     print (d[i]) # to print values of dictionary
+#     print(i)   # to print keys of dictionary
+
+
+# methods
+# d = {10:100 , 20:200, 30:300, 40:400}
+
+# # d.clear()
+
+# a = d.copy() # shallow copy
+# print(a)
+
+# print(d.get(20)) # to get value of a key
+# print(d.items()) # to get all items in the form of tuples
+
+
+# 1 merging two dictionaries
+
+# d1 = {10:100 , 20:200 , 30:300}
+# d2 = {40:400 , 50:500 , 60:600}
+
+# for i in d2:
+#     d1[i] = d2[i]
+
+# print(d1)
+
+#2 sum all the values in the dictionary
+# d = {10:100 , 20:200 , 30:300}
+# sum = 0
+# for i in d:
+#     sum = sum + d[i]
+
+# print(f"sum of all values is {sum}")
+
+
+#3 counting frequency of each element in list 
+# a = [1,1,1,2,2,3,3,3,4,4,4,4]
+# freq = {}
+# for i in a:
+#     if i in freq:
+#         freq[i] += 1
+#     else:
+#         freq[i] = 1
+
+# print(freq)
+
+#combining two dictionaries adding values of common keys 
+# d1 = {10:100 , 20:200 , 40:300}
+# d2 = {40:400 , 50:500 , 60:600}
+
+# for i in d2:
+#     if i in d1:
+#         d1[i] = d1[i] + d2[i]
+#     else:
+#         d1[i] = d2[i]
+
+# print(d1)
+
+#exceptions handling
+
+
+# a = int (input("enter a number :"))
+
+# try:
+#     print(10/a)
+# except ZeroDivisionError:
+#     print("cannot divide by zero ")
+# else:
+#     print("no error")
+# finally:
+#     print("i will run no matter what")
+# print("hello")
+
+#raise exception
+
+# file handeling 
+
+# p = open('main.py')
+# print(p.read())  # reads the whole file
+
+# r = open('ironman.txt', 'a') 
+# r.write("i am ironman ")
+# r.write('appending file')  # w for write mode , r for read mode , a for append mode
+# r.close()
+
+# oops in python
+
+# imperative appraoch 
+# a = 2
+# b = 5
+# print(a+b)
+
+
+# functional approach 
+# def add (a, b):
+#     return a + b   
+ 
+# print(add(2, 5))
+
+
+# class 
+# class Car:
+#     a = 12  # class attribute
+#     def hello():   # method 
+#         print("hello car")
+
+#     print("im getting printed when class is defined")
+
+# # print(a) # will give error because a is not defined in this scope
+# print(Car().a)  # to access class attribute
+# Car.hello()  # to access method
+
+# obj = Car()  # creating object of class
+# print(obj.a)  # accessing class attribute using object
+# obj.hello()  # accessing method using object
+
+
+# constructor
+# class Factory :
+#     def __init__(self, material , zips , pockets ): # constructor use as parameter and self as location of object
+#         self.material = material
+#         self.zips = zips
+#         self.pockets = pockets
+    
+#     def show (self):
+#         print(f"ojects details are  {self.material} , zips are {self.zips} , pockets are {self.pockets}")
+
+# reebok = Factory("leather", 5, 4)
+# nike = Factory("jeans", 3, 2)
+
+# print(reebok.material)
+# print(nike.zips)
+# reebok.show()
+# nike.show() 
+
+
+# types of attributes
+
+# class Car:
+#     wheels = 4 # class attribute
+
+#     def __init__(self, color):
+#         self.color = color  # instance attribute
+
+#     def show (self):    # instance method
+#         print ("How have you been ?")
+
+#     @classmethod
+#     def hello(cls):
+#         print ("hello car")  # class method
+
+#     @staticmethod
+#     def greet():
+#         print("good morning")  # static method  
+
+# obj = Car("red")
+ 
+# obj.show()  # instance method called using object
+# Car.hello()  # class method called using class name
+# Car.greet()  # static method called using class name
+# print(obj.color)  # instance attribute called using object
+# print(Car.wheels)  # class attribute called using class name
+
+
+# inheritance
+
+# single level inheritance
+
+# class FactoryDelhi :  # parent class/super class
+#     a = "I am delhi factory"
+#     def hello (self):
+#         print("i make perfumes in delhi factory")
+
+# class FactoryMumbai(FactoryDelhi):  # child class /sub class
+#     pass
+
+# obj = FactoryDelhi()  # object of delhi factory
+# obj2 = FactoryMumbai()  # object of mumbai factory
+# print(obj2.a)
+
+
+# class Animal : # parent class
+#     def __init__(self,name):
+#         self.name = name
+
+#     def show (self):
+#         print(f" name is {self.name}")
+
+# class Human(Animal) : #child class
+#     def __init__(self, name, age ):
+#         super().__init__(name)  # to call constructor of parent class
+#         self.age = age
+
+#     def show (self):
+#         print(f" name is {self.name},{self.age}")
+
+# animal1 = Animal("tiger")  #instance of parent class
+# person1 = Human("Sarthak",23)  #instance of child class
+
+# animal1.show()
+# person1.show()
+
+
+
+
+# multilevel inheritance
+
+
+# class Animal :
+#     name1 = "lion"
+
+# class Human :
+#     name2 = "Sarthak"
+    
+# class Robots (Human, Animal):  # multiple inheritance
+#     name3 = "robo"
+
+# obj = Robots()
+
+# print(obj.name1, obj.name2, obj.name3)
+
+
+
+# class Factory :
+#     def __init__(self,material ,zips ):
+#         self.material = material 
+#         self.zips = zips 
+
+# class BhopalFactory (Factory):
+#     def __init__(self, material, zips, color):
+#         super().__init__(material, zips)
+#         self.color = color 
+       
+# class PuneFactory(BhopalFactory):
+#     def __init__(self, material, zips, color, pockets):
+#         super().__init__(material, zips, color)
+#         self.pockets = pockets 
+
+
+
+# obj =PuneFactory()
+
+
+# polymorphism 
+
+
+#overriding
+# class Animal :
+#     def show (self):
+#         print("hello im Sarthak")
+
+# class Human (Animal):
+#     def show(self):
+#         print("How are you ?")
+
+# obj = Human()
+# obj.show()  #method overriding 
+
+
+# duck typing
+
+# class Animal :
+#     def show (self):
+#         print("im showing")
+
+# class Human(Animal):
+#     def show(self):
+#         print("hellp im also showing")
+
+# obj = Animal()
+# obj2 = Human()
+
+# obj.show()
+# obj2.show()  #separated by classes 
+
+
+ 
+ #encapsulation 
+
+#proctected attributes and methods 
+
+# naming convention to tell developers that this is protected 
+
+# class Factory :
+#     _a = "pune "  # proctected 
+
+#     def _show (self):
+#         print("hello im pune factory ")
+
+# class Bhopal (Factory):
+#     def show2(self):
+#         print(super()._a)  # trying to accessing protected 
+
+  
+# obj = Bhopal()
+# obj.show2()
+
+
+
+# private attributes and methods
+
+
+# class Factory :
+#     __a = "pune "  # private  __
+
+#     def _show (self):
+#         print("hello im pune factory ")
+
+# class Bhopal (Factory):
+#     def show2(self):
+#         print(super().__a)  # trying to accessing private content 
+
+  
+# obj = Bhopal()
+# obj.show2()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
