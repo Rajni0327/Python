@@ -797,29 +797,208 @@
 
 
 
+# abstraction
+
+# from abc import ABC, abstractmethod 
+
+
+# class abstract(ABC):
+#     @abstractmethod
+#     def perimeter (self):
+#         pass
+     
+#     @abstractmethod
+#     def area (self):
+#         pass
+
+
+# class Square(abstract):
+#     def __init__(self,side):
+#         self.side = side
+
+#     def perimeter (self):
+#         print("i have created")
+
+#     def area (self):
+#         print("i have created this too")
+
+# class Circle (abstract):
+#     def __init__(self,radius):
+#         self.radius = radius
+        
+#     def perimeter (self):
+#         print("i have created")
+
+#     def area (self):
+#         print("i have created this too")
+
+
+# obj = Circle (7)
+# obj2 = Square(12)
+
+    
+
+
+
+#Dunder methods
+# start and end with double underscore
+
+# class Animal :
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+
+#     def __str__(self):
+#         return f"hello how are you and your name is {self.name}"
+    
+#     def __add__ (self, other):
+#         sum = 0
+#         for i in other:
+#             sum = sum + i.age
+#         return f"your sum of ages are {self.age + sum}"
+
+    
+# obj = Animal("whale",12)
+# obj2 = Animal("dolphin", 5)
+# obj3 = Animal("tiger",3)
+
+
+# print(obj + (obj2,obj3))
+
+
+
+# decorator 
+
+
+# def decorate(func):
+#     def wrapper ():
+#         print("i will print myself before the function hello ")
+#         func()
+#         print("i will print after the function")
+#     return wrapper
+
+# @decorate
+# def hello( ) :
+#     print("hello im Sarthak sharma")
+
+# hello()
+
+
+
+# def decorate(func):
+#     def wrapper (a,b):
+#         print("Addition to your numbers are ")
+#         func(a,b)
+#         print("thankyou")
+#     return wrapper
+
+# @decorate
+# def Addition(a,b) :
+#     print(f"your total is {a + b}")
+
+# Addition(23,26)
+
+
+
+# args and kwargs 
+
+
+#args
+
+# def addition (*args):  #storing multiple arguments in tuple form 
+#     sum = 0
+#     for i in args:
+#         sum = sum +i 
+#     print (sum)
+
+# addition (12,12.658856456545)
+
+# #kwargs 
+# #keyword arguments 
+
+# def info(**kwargs):
+#     print("your information is : \n")
+#     for i in kwargs:
+#         print(f"{i} : {kwargs[i]}")
+
+
+
+# info (name = "sarthak", age = 23 , designation = "ai/ml")
 
 
 
 
 
+# def decorate(func):
+#     def wrapper (*args ,**kwargs):
+#         print("Addition to your numbers are ")
+#         func(*args, **kwargs)
+#         print("thankyou")
+#     return wrapper
+
+# @decorate
+# def Addition(a,b) :
+#     print(f"your total is {a + b}")
+
+# Addition(23,26)
 
 
 
 
+# ternary operation 
+# a = 13
+
+# print ("even ") if a %2 == 0 else print("odd")
+
+
+
+#comprehension 
+
+
+# l = [i for i in range(1,21) if i %2==0]  #list comprehension
+# print(l)
+
+
+# l = {i : i**2 for i in range(1,21)}  #dictionary comprehension
+# print(l)
+
+
+# l = {i*i for i in range(10) if i %2==0} #set comprehension
+# print(l)
+
+
+#Lamda Function 
+
+# addition = lambda a,b : a+b 
+
+# print(addition(12,12))
 
 
 
 
+# addition = lambda a : "even" if a %2 == 0 else "odd"
+
+# print(addition(23))
 
 
 
 
+# map filter and zip
 
 
+# a = [1,2,3,4,5]
+
+# result = map (lambda x : x*2, a )
+# or
+# def double (x):
+#     return x*2
+
+# result = map(double,a)
 
 
+# map works better with lambda 
 
-
+# print (list(result))
 
 
 
