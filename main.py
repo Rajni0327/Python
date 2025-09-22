@@ -1001,12 +1001,39 @@
 # print (list(result))
 
 
+# filter
+# def even(x):
+#     if x % 2 == 0:
+#         return True
+#     else:
+#         return False
+
+# a = [1,2,3,4,5,6,7,8,9]
+
+# # result= filter(even ,a)
+# #or
+# result = filter (lambda x :True if x%2 == 0 else False ,a)
+
+# print(list(result))
+
+
+
+# modules and packages 
+
+# module is a single file containing code to use this file in other file 
+
+# import maths
+
+# print(maths.addition(12,12)) #calling from another file 
 
 
 
 
+# packages 
+# contain one or more modules 
 
+from packages import hello ,maths
 
+# if folder in folder 
 
-
-
+# from foldername.foldername import hello , maths 
